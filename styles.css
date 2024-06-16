@@ -1,43 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <h1 id ="title">2024 Election Survey</h1>
-    <p id="description">This is a survey to collect polling data for the 2024 presidential election</p>
-  </head>
-  <body>
-    <form id="survey-form" method="post">
-      <fieldset>
-      <label for="name" id="name-label">Enter your first name:<input type="text" id="name" name="name" placeholder="John" required /></label>
-      <label for="name" id="name-label">Enter your last name:<input type="text" id="name" name="name" placeholder="Doe" required /></label>
-      <label for="email" id="email-label">Enter your email address:<input type="email" id="email" name="email" placeholder="john123@gmail.com" required /></label>
-      <label for="age" id="age-label">Enter your age:<input type="number" id="age" name="age" placeholder="18" min="18" max ="120"required /></label>
-      </fieldset>
-      <fieldset>
-      <label for="dropdown" id="dropdown-label">Do you consider yourself more of a Democrat or a Republican
-        <select id="dropdown" name="dropdown">
-          <option value="placeholder">Choose one of the following</option>
-          <option value="1">Democrat</option>
-          <option value="2">Republican</option>
-        </select>
-      </label>
-      </fieldset>
-      <fieldset>
-        <label for="radio"><input type="radio" value="A" name="One" class="inline" required checked/>I do not expect to vote for in the next election</label>
-      <label for="radio"><input type="radio" value="B" name="Two" class="inline" required/>I expect to vote for Joe Biden in the next election</label>
-      <label for="radio"><input type="radio" value="C" name="Three" class="inline" required/>I expect to vote for Donald Trump in the next election</label>
-      <label for="radio"><input type="radio" value="D" name="Four" class="inline" required/>I expect to vote for a third party in the next election</label>
-      
-      </fieldset>
-      <fieldset>
-      <label for="checkbox"><input type="checkbox" value="A" name="results" class="inline" />I want to recieve the results of this poll</label>
-      <label for="checkbox"><input type="checkbox" value="B" name="more-polls" class="inline" />I want to be contacted with future polls</label>
-      </fieldset>
-      <label for="comment">Feedback:
-        <textarea id="comments" rows="4" cols="20" placeholder="Suggestions on future polls or data we should include? Tell us here!"></textarea>
-      </label>
-      <input id ="submit" type="submit" value="Submit">
-    </form>
-  </body>
-</html>
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+.inline{
+  display: inline; 
+}
+
